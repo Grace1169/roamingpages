@@ -1,0 +1,395 @@
+/* your styles go here */
+.navbar-brand img {
+    max-height: 40px;
+  }
+
+.solo-travel {
+  text-align: center;
+  justify-content: center;
+}
+
+.korea-post {
+  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.divider {
+  padding: 0px;
+  background: url('../img/korea.gif'); 
+  background-position: center bottom;
+}
+
+section#categories {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+section#posts {
+  padding-top: 0;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  padding: 6.25rem 0;
+}
+
+.img-cat > .overlay {
+  border-radius: 7%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-slideshows, .img-slideshows02, .img-slideshows03, .img-slideshows04, .img-slideshows05 {
+  display: none;
+}
+
+.img-navigations {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-cat {
+  margin: 1rem;
+  width: 280px;
+  height: 200px;
+  border-radius: 7%;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.img-cat > .overlay:hover {
+  background: rgba(0, 0, 0, 0);
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: rgb(156, 156, 156);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  color: rgba(0,0,0,0.9);
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.dot, .dot02, .dot03, .dot04, .dot05 {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 3px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active-dot, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fadeIn {
+  animation: fadeIn 1.5s;
+  -webkit-animation: fadeIn 1.5s;
+  -moz-animation: fadeIn 1.5s;
+  -o-animation: fadeIn 1.5s;
+  -ms-animation: fadeIn 1.5s;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0} 
+  100% {opacity: 1}
+}
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0} 
+  100% {opacity: 1}
+}
+@-moz-keyframes fadeIn {
+  0% {opacity: 0} 
+  100% {opacity: 1}
+}
+@-o-keyframes fadeIn {
+  0% {opacity: 0} 
+  100% {opacity: 1}
+}
+@-ms-keyframes fadeIn {
+  0% {opacity: 0} 
+  100% {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next {font-size: 11px}
+  .img-navigations {width: 50%}
+
+}
+
+@media (max-width: 1300px) {
+  .img-navigations {
+    flex-direction: row;
+  }
+  .img-cat {
+    margin: 0.3rem;
+    width: 250px;
+    height: 200px;
+  }
+  .img-cat > .overlay {
+    width: 250px;
+    height: 200px;
+    padding: 0;
+  }
+  footer.footer {
+    gap: 9.5rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .img-navigations {
+    flex-direction: row;
+  }
+  .img-cat {
+    margin: 0.3rem;
+    width: 200px;
+    height: 200px;
+  }
+  .img-cat > .overlay {
+    width: 200px;
+    height: 200px;
+    padding: 0;
+  }
+  footer.footer {
+    gap: 8rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .img-navigations {
+    flex-direction: row;
+  }
+  .img-cat {
+    margin: 0.3rem;
+    width: 180px;
+    height: 200px;
+  }
+  .img-cat > .overlay {
+    width: 180px;
+    height: 200px;
+    padding: 0;
+  }
+  footer.footer {
+    gap: 6rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .img-navigations {
+    flex-direction: column;
+  }
+  .img-cat {
+    margin: 0.3rem;
+    width: 300px;
+    height: 100px;
+  }
+  .img-cat > .overlay {
+    width: 300px;
+    height: 100px;
+    padding: 0;
+  }
+  footer.footer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+.form-popup > input[type=text] {
+  width: 70%;
+}
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  background-color: #f2f2f2;
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #9BABBF;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #808e9f;
+}
+
+/* Add a background color and some padding around the form */
+section#form {
+  display: flex;
+  flex-flow: column wrap;
+  border-radius: 5px;
+  padding: 0;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscribe-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.subscribe {
+  cursor: pointer;
+}
+
+.form-popup {
+  display: none;
+  position: absolute;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+  background-color: #ffffff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.show {
+  display: block;
+}
+
+.mySubmit {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.submit-content {
+  background-color: #ffffff;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+.closeSubmit {
+  color: #D93D04;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.closeSubmit:hover,
+.closeSubmit:focus {
+  color: #8C1F1F;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.smallImage {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.smallImage:hover {opacity: 0.7;}
+
+.bigImage {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.bigImage-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.bigImage-content {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close-image {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close-image:hover,
+.close-image:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .bigImage-content {
+    width: 100%;
+  }
+}
