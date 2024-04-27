@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Roaming Pages</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Google fonts - Open Sans-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- gLightbox-->
+    <link rel="stylesheet" href="vendor/glightbox/css/glightbox.css">
+    <!-- Theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- gLightbox-->
+    <link rel="stylesheet" href="vendor/glightbox/glightbox.css">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="favicon.png">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom py-3">
+        <div class="container py-1"><a class="navbar-brand text-sm fw-bold text-dark" href="index.html"><img src="img\roaming pages.png" alt="Roaming Pages Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+              <li class="nav-item"><a class="nav-link " href="index.html">HOME</a>
+              </li>
+              <li class="nav-item"><a class="nav-link " href="designthinking.html">DESIGN THINKING</a>
+              </li>
+              <li class="nav-item"><a class="nav-link " href="travels.html">TRAVELS</a>
+              </li>
+              <li class="nav-item"><a class="nav-link active" href="contact.html">CONTACT</a>
+              </li>
+              <li class="nav-item mt-2 mt-lg-0">
+                <ul class="list-inline d-flex align-items-center">
+                  <li class="list-inline-item mx-lg-2 px-2 border-start border-end"><a class="search-btn nav-link small py-0 text-dark" href="#"><i class="fas fa-search"></i></a></li>
+                  <li class="list-inline-item d-flex align-items-end small subscribe-dropdown"><div class="subscribe" onclick="openForm()">SUBSCRIBE</div></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="form-popup" id="myForm">
+        <h2>SUBSCRIBE TO OUR NEWSLETTER</h2>
+        <p>Sign up for our weekly update and be the first to know about our hot travel tips!</p>
+        <p>No spam, we promise.</p>
+        <input type="text" placeholder="Email address" name="mail" required><br>
+        <input type="submit" value="SIGN ME UP"><br>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </div>
+      <div class="search-area">
+        <div class="search-area-inner d-flex align-items-center justify-content-center position-relative">
+          <div class="close-btn position-absolute p-4 top-0 end-0 cursor-pointer z-index-20"><i class="fas fa-times"></i></div>
+          <div class="row d-flex justify-content-center w-100">
+            <div class="col-md-8">
+              <form action="#">
+                <div class="input-group border-bottom">
+                  <input class="form-control form-control-lg border-0 shadow-0 ps-0 bg-none px-0" type="search" placeholder="What are you looking for?">
+                  <button class="btn btn-link btn-sm shadow-0 px-0 btn-lg text-dark" type="submit"><i class="fas fa-search"></i></button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="container" style="padding-top: 2rem; padding-bottom: 2rem;">
+        <div class="row gy-5">
+            <h2>Just say HELLO!</h2>
+            <span style="margin-top:0.3rem !important;">Let us know more about you!</span>
+            <main class="col-lg-8">
+                <section id="form">
+                        <div style="display: flex; flex-direction: row;">
+                            <input type="text" id="fname" name="firstname" placeholder="First name" style="margin-right: 20px;" required>
+                            <input type="text" id="lname" name="lastname" placeholder="Last name" required>
+                        </div>
+                        <div style="display: flex; flex-direction: row;">
+                            <input type="text" id="email" name="email" placeholder="Email" style="margin-right: 20px;" required>
+                            <input type="text" id="phone" name="phone" placeholder="Phone" required>
+                        </div>
+                        <div style="display: flex; flex-direction: row; justify-content: center; align-items:center;">
+                            <label for="type" style="margin-right: 10px;">Reason:</label> 
+                            <select id="type" name="type">
+                                <option value="feedback">Feedback</option>
+                                <option value="suggestions">Suggestions</option>
+                                <option value="enquiry">Enquiry</option>
+                            </select>
+                        </div>
+                        <div style="display: flex; flex-direction: row; justify-content: center; align-items:center;">
+                            <label for="subject" style="margin-right: 10px;">Subject:</label> 
+                            <select id="subject" name="subject">
+                                <option value="general">General</option>
+                                <option value="destination">Destination</option>
+                                <option value="itinerary">Itinerary</option>
+                                <option value="food">Food and Drink</option>
+                                <option value="culture">Culture and History</option>
+                                <option value="travel">Travel Tips</option>
+                            </select>
+                        </div>
+                    <textarea id="message" name="message" placeholder="Message" style="height:200px" required></textarea>
+                
+                    <input type="submit" id="submit" value="SUBMIT" onclick="Submitted()">
+                
+                </section>
+                <div id="mySubmit" class="mySubmit">
+                    <div class="submit-content">
+                        <span class="closeSubmit">&times;</span>
+                        <p>Thank you! Your form has been submitted. I will get back to you within 3 working days!</p>
+                    </div>
+                </div>
+            </main>
+            <aside class="col-lg-4">
+                <div class="card mb-5">
+                    <div class="card-body">
+                        <h6 class="text-black">Roaming Pages Blog</h6>
+                        <p class="fw-light mb-1">Grace Ng</p>
+                        <p class="fw-light mb-1">Phone: +65 1234 5678</p>
+                        <p class="fw-light mb-4">Email: <a class="text-decoration-underline text-reset" href="mailto:graceng004@suss.edu.sg">graceng004@suss.edu.sg</a></p>
+                        <ul class="list-unstyled">
+                        <li class="list-inline-item"><a class="text-reset me-2" href="!#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="list-inline-item"><a class="text-reset me-2" href="!#"><i class="fab fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a class="text-reset me-2" href="!#"><i class="fab fa-instagram"></i></a></li>
+                        <li class="list-inline-item"><a class="text-reset me-2" href="!#"><i class="fab fa-behance"></i></a></li>
+                        <li class="list-inline-item"><a class="text-reset me-2" href="!#"><i class="fab fa-pinterest"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+    <!-- Page Footer-->
+    <footer class="footer text-white" style="background: #8C1F1F">
+        <div class="navbar-brand">
+          <img src="img\roaming pages-white.png" alt="Roaming Pages Logo">
+        </div>
+        <a class="text-reset fw-light" href="designthinking.html">Design Thinking</a>
+        <a class="text-reset fw-light" href="travels.html">Travels</a>
+        <a class="text-reset fw-light" href="contact.html">Contact</a>
+        <div style="text-align: right;">
+          
+          <ul class="list-unstyled">
+            <li class="list-inline-item"><a class="text-reset me-2" href="!#"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="list-inline-item"><a class="text-reset me-2" href="!#"><i class="fab fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a class="text-reset me-2" href="!#"><i class="fab fa-instagram"></i></a></li>
+            <li class="list-inline-item"><a class="text-reset me-2" href="!#"><i class="fab fa-behance"></i></a></li>
+            <li class="list-inline-item"><a class="text-reset me-2" href="!#"><i class="fab fa-pinterest"></i></a></li>
+            </ul>
+          <p class="mb-0 fw-light text-smt">&copy; 2023. All rights reserved.</p>
+          </p>
+        </div>
+      </footer>
+      <!-- JavaScript files-->
+      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="vendor/glightbox/glightbox.js"></script>
+      <script src="js/theme.js"></script>
+      <script src="js/slideshow.js"></script>
+      <script src="js/categories.js"></script>
+      <script src="js/subscribe.js"></script>
+     <script src="js/submit.js"></script> 
+      <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    </body>
+  </html>

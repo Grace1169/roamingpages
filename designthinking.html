@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Roaming Pages</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Google fonts - Open Sans-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- gLightbox-->
+    <link rel="stylesheet" href="vendor/glightbox/css/glightbox.css">
+    <!-- Theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- gLightbox-->
+    <link rel="stylesheet" href="vendor/glightbox/glightbox.css">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="favicon.png">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom py-3">
+      <div class="container py-1"><a class="navbar-brand text-sm fw-bold text-dark" href="index.html"><img src="img\roaming pages.png" alt="Roaming Pages Logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+            <li class="nav-item"><a class="nav-link " href="index.html">HOME</a>
+            </li>
+            <li class="nav-item"><a class="nav-link active" href="designthinking.html">DESIGN THINKING</a>
+            </li>
+            <li class="nav-item"><a class="nav-link " href="travels.html">TRAVELS</a>
+            </li>
+            <li class="nav-item"><a class="nav-link " href="contact.html">CONTACT</a>
+            </li>
+            <li class="nav-item mt-2 mt-lg-0">
+              <ul class="list-inline d-flex align-items-center">
+                <li class="list-inline-item mx-lg-2 px-2 border-start border-end"><a class="search-btn nav-link small py-0 text-dark" href="#"><i class="fas fa-search"></i></a></li>
+                <li class="list-inline-item d-flex align-items-end small subscribe-dropdown"><div class="subscribe" onclick="openForm()">SUBSCRIBE</div></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="form-popup" id="myForm">
+      <h2>SUBSCRIBE TO OUR NEWSLETTER</h2>
+      <p>Sign up for our weekly update and be the first to know about our hot travel tips!</p>
+      <p>No spam, we promise.</p>
+      <input type="text" placeholder="Email address" name="mail" required><br>
+      <input type="submit" value="SIGN ME UP"><br>
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </div>
+    <div class="search-area">
+      <div class="search-area-inner d-flex align-items-center justify-content-center position-relative">
+        <div class="close-btn position-absolute p-4 top-0 end-0 cursor-pointer z-index-20"><i class="fas fa-times"></i></div>
+        <div class="row d-flex justify-content-center w-100">
+          <div class="col-md-8">
+            <form action="#">
+              <div class="input-group border-bottom">
+                <input class="form-control form-control-lg border-0 shadow-0 ps-0 bg-none px-0" type="search" placeholder="What are you looking for?">
+                <button class="btn btn-link btn-sm shadow-0 px-0 btn-lg text-dark" type="submit"><i class="fas fa-search"></i></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="py-5">
+      <div class="container">
+        <div class="row gy-5">
+          <!-- Latest Posts -->
+            <div class="container">
+              <div class="card mb-5">
+                <div class="card-body" style="text-align: center; display: flex; flex-direction: column;">
+                  <h3 class="h6">CONTENT</h3>
+                    <a class="nav-link " href="#empathize">EMPATHIZE</a>
+                    <a class="nav-link " href="#define">DEFINE</a>
+                    <a class="nav-link " href="#ideate">IDEATE</a>
+                    <a class="nav-link " href="#prototype">PROTOTYPE</a>
+                    <a class="nav-link " href="#test">TEST</a>
+                    <a class="nav-link " href="#implement">IMPLEMENT</a>
+                </div>
+              </div>
+              <ul class="list-inline mb-3">
+                <li class="list-inline-item"><a class="text-uppercase" href="!#">Design</a></li>
+                <li class="list-inline-item"><a class="text-uppercase" href="!#">Thinking</a></li>
+              </ul>
+              <h1 class="mb-4">For someone who struggles to think in code<a href="!#"><i class="fa fa-bookmark-o"></i></a></h1>
+              <ul class="list-inline list-separated text-gray-500 mb-5">
+                <li class="list-inline-item"><a class="d-flex align-items-center flex-wrap text-reset" href="!#">
+                    <div class="avatar flex-shrink-0"><img class="img-fluid" src="img/avatar-3.jpg" alt="..."></div><small>Grace Ng</small></a></li>
+                <li class="list-inline-item small"><i class="far fa-clock"></i> 23 March 2023</li>
+                  <li class="list-inline-item"><a class="tag" href="!#">#Design</a></li>
+                  <li class="list-inline-item"><a class="tag" href="!#">#Thinking</a></li>
+              </ul>
+              <div class="post-body">
+                <h3 id="empathize">Empathize</h3>
+                <div class="border-start border-4 mb-3">
+                  <figure class="border p-4">
+                    <blockquote class="blockquote">
+                      <p>Google surveys were conducted regarding which bloggers users tend to deviate to for travel guides and blog posts. Background research was also done to understand the kind of content that is more commonly covered and drives higher web traffic. </p>
+                    </blockquote>
+                  </figure>
+                </div>
+                <p class="mb-4"><b>Key findings:</b> <br>
+                  - Users prefer blogs with a clean and aesthetic layout that is not too wordy and has endless scrolling.<br>
+                  - As for popular blog posts, it is observed that they are usually titled with keywords such as “Itinerary” and “ top xx must-visit places”.</p>
+                <div class = "row">
+                <div class="slideshow-container">
+                  <div style="display:flex; flex-direction: row; justify-content: center; align-items: center; width: 100%;">
+                    <a class="prev" onclick="plusSlides(-1)" tabindex="0">&#10094;</a>
+                    <div class="img-slideshows fadeIn">
+                      <div class="img-navigations">
+                        <img src="img/slide1.png" style="width:100%">
+                      </div>
+                    </div>
+                    <div class="img-slideshows fadeIn">
+                      <div class="img-navigations">
+                        <img src="img/slide2.png" style="width:100%">
+                      </div>
+                    </div> 
+                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                </div>
+                <div class="dots">
+                  <span class="dot" onclick="currentSlide(1)"></span>
+                  <span class="dot" onclick="currentSlide(2)"></span>
+                </div>
+                <h3 id="define">Define</h3>
+                <div class="border-start border-4 mb-3">
+                  <figure class="border p-4">
+                    <blockquote class="blockquote">
+                      <p>After analysing and synthesizing user insights from the empathize stage, I will define the problem statement the microsite will address. This will help me to focus on the key issues that the website needs to solve for the target audience or identify key topics and categories the blog should cover.</p>
+                    </blockquote>
+                  </figure>
+                </div>
+                <div class = "row">
+                  <div class="slideshow-container">
+                    <div style="display:flex; flex-direction: row; justify-content: center; align-items: center; width: 100%;">
+                      <a class="prev" onclick="plusSlides02(-1)" tabindex="0">&#10094;</a>
+                      <div class="img-slideshows02 fadeIn">
+                        <div class="img-navigations">
+                          <img src="img/slide3.png" style="width:100%">
+                        </div>
+                      </div>
+                      <div class="img-slideshows02 fadeIn">
+                        <div class="img-navigations">
+                          <img src="img/slide4.png" style="width:100%">
+                        </div>
+                      </div> 
+                    <a class="next" onclick="plusSlides02(1)">&#10095;</a>
+                  </div>
+                  </div>
+                  <div class="dots">
+                    <span class="dot02" onclick="currentSlide02(1)"></span>
+                    <span class="dot02" onclick="currentSlide02(2)"></span>
+                  </div>
+                  <h3 id="ideate">Ideation</h3>
+                  <div class="border-start border-4 mb-3">
+                    <figure class="border p-4">
+                      <blockquote class="blockquote">
+                        <p>Using the problem statement and empathy map as a guide, this phase allows me to brainstorm a range of ideas and solutions to address the user needs. In this stage, I referenced multiple travel websites to get inspiration on what overall look and feel, layout, and content..</p>
+                      </blockquote>
+                    </figure>
+                  </div>
+                  <div class = "row">
+                    <div class="slideshow-container">
+                      <div style="display:flex; flex-direction: row; justify-content: center; align-items: center; width: 100%;">
+                        <a class="prev" onclick="plusSlides03(-1)" tabindex="0">&#10094;</a>
+                        <div class="img-slideshows03 fadeIn">
+                          <div class="img-navigations">
+                            <img src="img/slide5.png" style="width:100%">
+                          </div>
+                        </div>
+                        <div class="img-slideshows03 fadeIn">
+                          <div class="img-navigations">
+                            <img src="img/slide6.png" style="width:100%">
+                          </div>
+                        </div> 
+                      <a class="next" onclick="plusSlides03(1)">&#10095;</a>
+                    </div>
+                    </div>
+                    <div class="dots">
+                      <span class="dot03" onclick="currentSlide03(1)"></span>
+                      <span class="dot03" onclick="currentSlide03(2)"></span>
+                    </div>              
+                  </div>
+                  <h3 id="prototype">Prototype</h3>
+                  <div class="border-start border-4 mb-3">
+                    <figure class="border p-4">
+                      <blockquote class="blockquote">
+                        <p>The prototypes will allow me to gather feedback from users and refine the design of the microsite to improve the user experience. A low-fidelity prototype is created before working on the microsite itself.</p>
+                      </blockquote>
+                    </figure>
+                  </div>
+                  <div class = "row">
+                    <div class="slideshow-container">
+                      <div style="display:flex; flex-direction: row; justify-content: center; align-items: center; width: 100%;">
+                        <a class="prev" onclick="plusSlides04(-1)" tabindex="0">&#10094;</a>
+                        <div class="img-slideshows04 fadeIn">
+                          <div class="img-navigations">
+                            <img src="img/slide8.png" style="width:100%">
+                          </div>
+                        </div>
+                        <div class="img-slideshows04 fadeIn">
+                          <div class="img-navigations">
+                            <img src="img/slide9.png" style="width:100%">
+                          </div>
+                        </div> 
+                        <div class="img-slideshows04 fadeIn">
+                          <div class="img-navigations">
+                            <img src="img/slide10.png" style="width:100%">
+                          </div>
+                        </div> 
+                        <div class="img-slideshows04 fadeIn">
+                          <div class="img-navigations">
+                            <img src="img/slide11.png" style="width:100%">
+                          </div>
+                        </div> 
+                      <a class="next" onclick="plusSlides04(1)">&#10095;</a>
+                    </div>
+                    </div>
+                    <div class="dots">
+                      <span class="dot04" onclick="currentSlide04(1)"></span>
+                      <span class="dot04" onclick="currentSlide04(2)"></span>
+                      <span class="dot04" onclick="currentSlide04(3)"></span>
+                      <span class="dot04" onclick="currentSlide04(4)"></span>
+                    </div>              
+                  </div>
+                  <h3 id="test">Test</h3>
+                  <div class="border-start border-4 mb-3">
+                    <figure class="border p-4">
+                      <blockquote class="blockquote">
+                        <p>Usability testing & Enhancements</p>
+                      </blockquote>
+                    </figure>
+                  </div>
+                  <div class = "row">
+                    <div class="slideshow-container">
+                      <div style="display:flex; flex-direction: row; justify-content: center; align-items: center; width: 100%;">
+                        <a class="prev" onclick="plusSlides05(-1)" tabindex="0">&#10094;</a>
+                        <div class="img-slideshows05 fadeIn">
+                          <div class="img-navigations">
+                            <img src="img/slide12.png" style="width:100%">
+                          </div>
+                        </div>
+                        <div class="img-slideshows05 fadeIn">
+                          <div class="img-navigations">
+                            <img src="img/slide13.png" style="width:100%">
+                          </div>
+                        </div> 
+                        <div class="img-slideshows05 fadeIn">
+                          <div class="img-navigations">
+                            <img src="img/slide14.png" style="width:100%">
+                          </div>
+                        </div> 
+                      <a class="next" onclick="plusSlides05(1)">&#10095;</a>
+                    </div>
+                    </div>
+                    <div class="dots">
+                      <span class="dot05" onclick="currentSlide05(1)"></span>
+                      <span class="dot05" onclick="currentSlide05(2)"></span>
+                      <span class="dot05" onclick="currentSlide05(3)"></span>
+                    </div>              
+                  </div>
+                  <h3 id="implement">Implement</h3>
+                  <div class="border-start border-4 mb-3">
+                    <figure class="border p-4">
+                      <blockquote class="blockquote">
+                        <p>The Korea travel blog microsite is then materialised and iteration is involved. It means going back to previous stages and making adjustments needed to ensure continual improvements and updates to meet the needs of the end user.</p>
+                      </blockquote>
+                    </figure>
+                  </div>
+            </div>
+        </div>
+      </div>
+    </section>
+    <!-- Page Footer-->
+    <footer class="footer text-white" style="background: #8C1F1F">
+      <div class="navbar-brand">
+        <img src="img\roaming pages-white.png" alt="Roaming Pages Logo">
+      </div>
+      <a class="text-reset fw-light" href="designthinking.html">Design Thinking</a>
+      <a class="text-reset fw-light" href="travels.html">Travels</a>
+      <a class="text-reset fw-light" href="contact.html">Contact</a>
+      <div style="text-align: right;">
+        
+        <ul class="list-unstyled">
+          <li class="list-inline-item"><a class="text-reset me-2" href="!#"><i class="fab fa-facebook-f"></i></a></li>
+          <li class="list-inline-item"><a class="text-reset me-2" href="!#"><i class="fab fa-twitter"></i></a></li>
+          <li class="list-inline-item"><a class="text-reset me-2" href="!#"><i class="fab fa-instagram"></i></a></li>
+          <li class="list-inline-item"><a class="text-reset me-2" href="!#"><i class="fab fa-behance"></i></a></li>
+          <li class="list-inline-item"><a class="text-reset me-2" href="!#"><i class="fab fa-pinterest"></i></a></li>
+          </ul>
+        <p class="mb-0 fw-light text-smt">&copy; 2023. All rights reserved.</p>
+        </p>
+      </div>
+    </footer>
+    <!-- JavaScript files-->
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/glightbox/glightbox.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/slideshow.js"></script>
+    <script src="js/categories.js"></script>
+    <script src="js/subscribe.js"></script> 
+    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  </body>
+</html>

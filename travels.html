@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Roaming Pages</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Google fonts - Open Sans-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- gLightbox-->
+    <link rel="stylesheet" href="vendor/glightbox/css/glightbox.css">
+    <!-- Theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- gLightbox-->
+    <link rel="stylesheet" href="vendor/glightbox/glightbox.css">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="favicon.png">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom py-3">
+      <div class="container py-1"><a class="navbar-brand text-sm fw-bold text-dark" href="index.html"><img src="img\roaming pages.png" alt="Roaming Pages Logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+            <li class="nav-item"><a class="nav-link " href="index.html">HOME</a>
+            </li>
+            <li class="nav-item"><a class="nav-link " href="designthinking.html">DESIGN THINKING</a>
+            </li>
+            <li class="nav-item"><a class="nav-link active" href="travels.html">TRAVELS</a>
+            </li>
+            <li class="nav-item"><a class="nav-link " href="contact.html">CONTACT</a>
+            </li>
+            <li class="nav-item mt-2 mt-lg-0">
+              <ul class="list-inline d-flex align-items-center">
+                <li class="list-inline-item mx-lg-2 px-2 border-start border-end"><a class="search-btn nav-link small py-0 text-dark" href="#"><i class="fas fa-search"></i></a></li>
+                <li class="list-inline-item d-flex align-items-end small subscribe-dropdown"><div class="subscribe" onclick="openForm()">SUBSCRIBE</div></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="form-popup" id="myForm">
+      <h2>SUBSCRIBE TO OUR NEWSLETTER</h2>
+      <p>Sign up for our weekly update and be the first to know about our hot travel tips!</p>
+      <p>No spam, we promise.</p>
+      <input type="text" placeholder="Email address" name="mail" required><br>
+      <input type="submit" value="SIGN ME UP"><br>
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </div>
+    <div class="search-area">
+      <div class="search-area-inner d-flex align-items-center justify-content-center position-relative">
+        <div class="close-btn position-absolute p-4 top-0 end-0 cursor-pointer z-index-20"><i class="fas fa-times"></i></div>
+        <div class="row d-flex justify-content-center w-100">
+          <div class="col-md-8">
+            <form action="#">
+              <div class="input-group border-bottom">
+                <input class="form-control form-control-lg border-0 shadow-0 ps-0 bg-none px-0" type="search" placeholder="What are you looking for?">
+                <button class="btn btn-link btn-sm shadow-0 px-0 btn-lg text-dark" type="submit"><i class="fas fa-search"></i></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section id = "categories">
+      <div class="container">
+        <div class = "row">
+          <div class="slideshow-container">
+            <h2 class="h4">Choose Your Destination</h2>
+            <div style="display:flex; flex-direction: row; justify-content: center; align-items: center;">
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <div class="img-slideshows fadeIn">
+                <div class="img-navigations">
+                  <div class="img-cat" style="background-image: url('./img/seoul.jpg');" id="defaultOpen" onclick="openCity(event, '1')">
+                    <div class="overlay">
+                      <span class="text-white">Seoul</span>
+                    </div>
+                  </div>
+                  <div class="img-cat" style="background-image: url('./img/jeju.jpg');" onclick="openCity(event, '2')">
+                    <div class="overlay">
+                      <span class="text-white">Jeju</span>
+                    </div>
+                  </div>
+                  <div class="img-cat" style="background-image: url('./img/busan.jpg');" onclick="openCity(event, '3')">
+                    <div class="overlay">
+                      <span class="text-white">Busan</span>
+                    </div>
+                  </div>
+                  <div class="img-cat" style="background-image: url('./img/jeonju1.jpg');" onclick="openCity(event, '4')">
+                    <div class="overlay">
+                      <span class="text-white">JeonJu</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="img-slideshows fadeIn">
+                <div class="img-navigations">
+                  <div class="img-cat" style="background-image: url('./img/jeolla.jpg');" onclick="openCity(event, '5')">
+                    <div class="overlay">
+                      <span class="text-white">Jeolla-do</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          </div>
+          <div class="dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="posts">
+      <div class="container">
+        <div class="row gy-5">
+          <!-- 1st cat -->
+          <main class="col-lg-8 travel-content" id="1"> 
+            <div class="container">
+              <div class="row gy-4 mb-5">
+                <!-- post -->
+                <div class="col-xl-6"><a class="mb-3" href="post.html"><img class="img-fluid" src="img/blog-post-1.jpg" alt="..."/></a>
+                  <div class="d-flex align-items-center justify-content-between mb-2"><small class="text-gray-500">20 January | 2023</small><a class="small fw-bold text-uppercase text-dark small" href="!#">Food</a></div>
+                  <h3 class="h4"><a class="text-black" href="post.html">A Foodie's Guide to Seoul: Must-Try Dishes and Where to Find Them</a></h3>
+                  <p class="text-muted text-sm">Explore the diverse and delicious food scene of Seoul, from traditional Korean dishes to modern fusion cuisine.</p>
+                  <ul class="list-inline list-separated text-gray-500 mb-0">
+                    <li class="list-inline-item"><a class="d-flex align-items-center flex-wrap text-reset" href="!#">
+                        <div class="avatar flex-shrink-0"><img class="img-fluid" src="img/avatar-3.jpg" alt="..."/></div><small>Grace Ng</small></a></li>
+                    <li class="list-inline-item small"><i class="far fa-clock"></i> 2 months ago</li>
+                    <li class="list-inline-item small"><i class="far fa-comment"></i> 12</li>
+                  </ul>
+                </div>
+                <!-- post             -->
+                <div class="col-xl-6"><a class="mb-3" href="post.html"><img class="img-fluid" src="img/blog-post-1-2.jpg" alt="..."/></a>
+                  <div class="d-flex align-items-center justify-content-between mb-2"><small class="text-gray-500">20 May | 2022</small><a class="small fw-bold text-uppercase text-dark small" href="!#">culture</a></div>
+                  <h3 class="h4"><a class="text-black" href="post.html">Hidden Gems of Seoul: Uncovering the City's Best Kept Secrets</a></h3>
+                  <p class="text-muted text-sm">Discover lesser-known attractions and off-the-beaten-path neighborhoods that showcase the city's unique culture and history.</p>
+                  <ul class="list-inline list-separated text-gray-500 mb-0">
+                    <li class="list-inline-item"><a class="d-flex align-items-center flex-wrap text-reset" href="!#">
+                        <div class="avatar flex-shrink-0"><img class="img-fluid" src="img/avatar-3.jpg" alt="..."/></div><small>Grace Ng</small></a></li>
+                    <li class="list-inline-item small"><i class="far fa-clock"></i> 1 year ago</li>
+                    <li class="list-inline-item small"><i class="far fa-comment"></i> 12</li>
+                  </ul>
+                </div>
+                <!-- post             -->
+                <div class="col-xl-6"><a class="mb-3" href="post.html"><img class="img-fluid" src="img/blog-post-1-3.jpg" alt="..."/></a>
+                  <div class="d-flex align-items-center justify-content-between mb-2"><small class="text-gray-500">10 March | 2023</small><a class="small fw-bold text-uppercase text-dark small" href="!#">Business</a></div>
+                  <h3 class="h4"><a class="text-black" href="post.html">Rakkojae Seoul: A Hanok Stay at a 130-Year-Old Property at Bukchon Hanok Village</a></h3>
+                  <p class="text-muted text-sm">Immerse yourself in the unique beauty of hanok architecture with a stay at Rakkojae in Bukchon Hanok Village. From the intricate wooden details to the serene courtyards, this traditional Korean guesthouse offers a one-of-a-kind experience in the heart of Seoul..</p>
+                  <ul class="list-inline list-separated text-gray-500 mb-0">
+                    <li class="list-inline-item"><a class="d-flex align-items-center flex-wrap text-reset" href="!#">
+                        <div class="avatar flex-shrink-0"><img class="img-fluid" src="img/avatar-3.jpg" alt="..."/></div><small>Grace Ng</small></a></li>
+                    <li class="list-inline-item small"><i class="far fa-clock"></i> 2 weeks ago</li>
+                    <li class="list-inline-item small"><i class="far fa-comment"></i> 12</li>
+                  </ul>
+                </div>
+                <!-- post -->
+                <div class="col-xl-6"><a class="mb-3" href="post.html"><img class="img-fluid" src="img/blog-post-1-4.jpg" alt="..."/></a>
+                  <div class="d-flex align-items-center justify-content-between mb-2"><small class="text-gray-500">16 August | 2020</small><a class="small fw-bold text-uppercase text-dark small" href="!#">Tips</a></div>
+                  <h3 class="h4"><a class="text-black" href="post.html">Navigating Korea: Tips for Travelers Facing Language Barriers</a></h3>
+                  <p class="text-muted text-sm">Visiting Korea can be an unforgettable experience, but for those who don't speak Korean, navigating the city can be a challenge. Check out our top tips for making the most of your trip without getting lost in translation.</p>
+                  <ul class="list-inline list-separated text-gray-500 mb-0">
+                    <li class="list-inline-item"><a class="d-flex align-items-center flex-wrap text-reset" href="!#">
+                        <div class="avatar flex-shrink-0"><img class="img-fluid" src="img/avatar-3.jpg" alt="..."/></div><small>Grace Ng</small></a></li>
+                    <li class="list-inline-item small"><i class="far fa-clock"></i> 2 years ago</li>
+                    <li class="list-inline-item small"><i class="far fa-comment"></i> 12</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Pagination -->
+              <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item"><span class="page-link"><i class="fas fa-angle-left"></i></span></li>
+                  <li class="page-item active"><a class="page-link" href="!#">1</a></li>
+                  <li class="page-item"><span class="page-link"><i class="fas fa-angle-right"></i></span></li>
+                </ul>
+              </nav>
+            </div>
+          </main>
+          <!-- 2nd category -->
+          <main class="col-lg-8 travel-content" id="2"> 
+            <div class="container">
+              <div class="row gy-4 mb-5">
+                <!-- post -->
+                <div class="col-xl-6"><a class="mb-3" href="post.html"><img class="img-fluid" src="img/blog-post-2-1.jpg" alt="..."/></a>
+                  <div class="d-flex align-items-center justify-content-between mb-2"><small class="text-gray-500">20 May | 2022</small><a class="small fw-bold text-uppercase text-dark small" href="!#">Culture</a></div>
+                  <h3 class="h4"><a class="text-black" href="post.html">Relax and Unwind: A Guide to the Best Beaches in Jeju</a></h3>
+                  <p class="text-muted text-sm">Whether you're looking for a secluded spot or a bustling beach party, Jeju Island offers a diverse range of beach experiences for every type of traveller.</p>
+                  <ul class="list-inline list-separated text-gray-500 mb-0">
+                    <li class="list-inline-item"><a class="d-flex align-items-center flex-wrap text-reset" href="!#">
+                        <div class="avatar flex-shrink-0"><img class="img-fluid" src="img/avatar-3.jpg" alt="..."/></div><small>Grace Ng</small></a></li>
+                    <li class="list-inline-item small"><i class="far fa-clock"></i> 10 months ago</li>
+                    <li class="list-inline-item small"><i class="far fa-comment"></i> 12</li>
+                  </ul>
+                </div>
+                <!-- post             -->
+                <div class="col-xl-6"><a class="mb-3" href="post.html"><img class="img-fluid" src="img/blog-post-2-2.jpg" alt="..."/></a>
+                  <div class="d-flex align-items-center justify-content-between mb-2"><small class="text-gray-500">20 May | 2022</small><a class="small fw-bold text-uppercase text-dark small" href="!#">Culture</a></div>
+                  <h3 class="h4"><a class="text-black" href="post.html">Exploring Jeju's UNESCO World Heritage Sites</a></h3>
+                  <p class="text-muted text-sm">Take a journey through Jeju's rich cultural history and explore its UNESCO World Heritage Sites.</p>
+                  <ul class="list-inline list-separated text-gray-500 mb-0">
+                    <li class="list-inline-item"><a class="d-flex align-items-center flex-wrap text-reset" href="!#">
+                        <div class="avatar flex-shrink-0"><img class="img-fluid" src="img/avatar-3.jpg" alt="..."/></div><small>Grace Ng</small></a></li>
+                    <li class="list-inline-item small"><i class="far fa-clock"></i> 10 months ago</li>
+                    <li class="list-inline-item small"><i class="far fa-comment"></i> 12</li>
+                  </ul>
+                </div>
+                <!-- post             -->
+                <div class="col-xl-6"><a class="mb-3" href="post.html"><img class="img-fluid" src="img/jeju3.jpg" alt="..."/></a>
+                  <div class="d-flex align-items-center justify-content-between mb-2"><small class="text-gray-500">16 August | 2020</small><a class="small fw-bold text-uppercase text-dark small" href="!#">Tips</a></div>
+                  <h3 class="h4"><a class="text-black" href="post.html">Navigating Korea: Tips for Travelers Facing Language Barriers</a></h3>
+                  <p class="text-muted text-sm">Visiting Korea can be an unforgettable experience, but for those who don't speak Korean, navigating the city can be a challenge. Check out our top tips for making the most of your trip without getting lost in translation.</p>
+                  <ul class="list-inline list-separated text-gray-500 mb-0">
+                    <li class="list-inline-item"><a class="d-flex align-items-center flex-wrap text-reset" href="!#">
+                        <div class="avatar flex-shrink-0"><img class="img-fluid" src="img/avatar-3.jpg" alt="..."/></div><small>Grace Ng</small></a></li>
+                    <li class="list-inline-item small"><i class="far fa-clock"></i> 2 years ago</li>
+                    <li class="list-inline-item small"><i class="far fa-comment"></i> 12</li>
+                  </ul>
+                </div>
+                <!-- post -->
+                <div class="col-xl-6"><a class="mb-3" href="post.html"><img class="img-fluid" src="img/jeju1.jpg" alt="..."/></a>
+                  <div class="d-flex align-items-center justify-content-between mb-2"><small class="text-gray-500">28 April | 2022</small><a class="small fw-bold text-uppercase text-dark small" href="!#">Culture</a></div>
+                  <h3 class="h4"><a class="text-black" href="post.html">Top 10 Incredible things to do in Jeju + Local spots!</a></h3>
+                  <p class="text-muted text-sm">Discover a whole new world of Jeju Island that you never knew existed with these exceptional and one-of-a-kind travel experiences that will take you off the beaten path and provide a truly unique and unforgettable journey.</p>
+                  <ul class="list-inline list-separated text-gray-500 mb-0">
+                    <li class="list-inline-item"><a class="d-flex align-items-center flex-wrap text-reset" href="!#">
+                        <div class="avatar flex-shrink-0"><img class="img-fluid" src="img/avatar-3.jpg" alt="..."/></div><small>Grace Ng</small></a></li>
+                    <li class="list-inline-item small"><i class="far fa-clock"></i> 11 months ago</li>
+                    <li class="list-inline-item small"><i class="far fa-comment"></i> 12</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Pagination -->
+              <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item"><span class="page-link"><i class="fas fa-angle-left"></i></span></li>
+                  <li class="page-item active"><a class="page-link" href="!#">1</a></li>
+                  <li class="page-item"><span class="page-link"><i class="fas fa-angle-right"></i></span></li>
+                </ul>
+              </nav>
+            </div>
+          </main>
+          <!-- 3rd category -->
+          <main class="col-lg-8 travel-content" id="3"> 
+            <div class="container">
+              <div class="row gy-4 mb-5">
+                <!-- post -->
+                <div class="col-xl-6"><a class="mb-3" href="post.html"><img class="img-fluid" src="img/blog-post-3-1.jpg" alt="..."/></a>
+                  <div class="d-flex align-items-center justify-content-between mb-2"><small class="text-gray-500">20 February | 2023</small><a class="small fw-bold text-uppercase text-dark small" href="!#">Food</a></div>
+                  <h3 class="h4"><a class="text-black" href="post.html">The Best Markets in Busan: A Shopper's Paradise</a></h3>
+                  <p class="text-muted text-sm">Showcasing the vibrant markets in Busan, including the famous Jagalchi Fish Market and Gukje Market, where visitors can find everything from souvenirs to delicious street food.</p>
+                  <ul class="list-inline list-separated text-gray-500 mb-0">
+                    <li class="list-inline-item"><a class="d-flex align-items-center flex-wrap text-reset" href="!#">
+                        <div class="avatar flex-shrink-0"><img class="img-fluid" src="img/avatar-3.jpg" alt="..."/></div><small>Grace Ng</small></a></li>
+                    <li class="list-inline-item small"><i class="far fa-clock"></i> 1 month ago</li>
+                    <li class="list-inline-item small"><i class="far fa-comment"></i> 12</li>
+                  </ul>
+                </div>
+                <!-- post             -->
+                <div class="col-xl-6"><a class="mb-3" href="post.html"><img class="img-fluid" src="img/blog-post-3-2.jpg" alt="..."/></a>
+                  <div class="d-flex align-items-center justify-content-between mb-2"><small class="text-gray-500">15 January | 2023</small><a class="small fw-bold text-uppercase text-dark small" href="!#">Accomodations</a></div>
+                  <h3 class="h4"><a class="text-black" href="post.html">Local’s Guide to Where To Stay In Busan in 2023</a></h3>
+                  <p class="text-muted text-sm">Discover the best places to stay in Busan with this insider's guide to the city's top hotels, hostels, and guesthouses. From budget-friendly options to luxurious getaways, we've got you covered for your next trip to South Korea's second-largest city.</p>
+                  <ul class="list-inline list-separated text-gray-500 mb-0">
+                    <li class="list-inline-item"><a class="d-flex align-items-center flex-wrap text-reset" href="!#">
+                        <div class="avatar flex-shrink-0"><img class="img-fluid" src="img/avatar-3.jpg" alt="..."/></div><small>Grace Ng</small></a></li>
+                    <li class="list-inline-item small"><i class="far fa-clock"></i> 2 months ago</li>
+                    <li class="list-inline-item small"><i class="far fa-comment"></i> 12</li>
+                  </ul>
+                </div>
+                <!-- post             -->
+                <div class="col-xl-6"><a class="mb-3" href="post.html"><img class="img-fluid" src="img/blog-post-3-3.jpg" alt="..."/></a>
+                  <div class="d-flex align-items-center justify-content-between mb-2"><small class="text-gray-500">5 November | 2022</small><a class="small fw-bold text-uppercase text-dark small" href="!#">Culture</a></div>
+                  <h3 class="h4"><a class="text-black" href="post.html">Finding Tranquility in Busan's Parks</a></h3>
+                  <p class="text-muted text-sm">Find your inner peace in the serene surroundings of Busan's parks. From meditation gardens to soothing nature walks, discover the tranquility and serenity of these peaceful urban green spaces.</p>
+                  <ul class="list-inline list-separated text-gray-500 mb-0">
+                    <li class="list-inline-item"><a class="d-flex align-items-center flex-wrap text-reset" href="!#">
+                        <div class="avatar flex-shrink-0"><img class="img-fluid" src="img/avatar-3.jpg" alt="..."/></div><small>Grace Ng</small></a></li>
+                    <li class="list-inline-item small"><i class="far fa-clock"></i> 4 months ago</li>
+                    <li class="list-inline-item small"><i class="far fa-comment"></i> 12</li>
+                  </ul>
+                </div>
+                <!-- post -->
+                <div class="col-xl-6"><a class="mb-3" href="post.html"><img class="img-fluid" src="img/blog-post-1-4.jpg" alt="..."/></a>
+                  <div class="d-flex align-items-center justify-content-between mb-2"><small class="text-gray-500">16 August | 2022</small><a class="small fw-bold text-uppercase text-dark small" href="!#">Tips</a></div>
+                  <h3 class="h4"><a class="text-black" href="post.html">Navigating Korea: Tips for Travelers Facing Language Barriers</a></h3>
+                  <p class="text-muted text-sm">Visiting Korea can be an unforgettable experience, but for those who don't speak Korean, navigating the city can be a challenge. Check out our top tips for making the most of your trip without getting lost in translation.</p>
+                  <ul class="list-inline list-separated text-gray-500 mb-0">
+                    <li class="list-inline-item"><a class="d-flex align-items-center flex-wrap text-reset" href="!#">
+                        <div class="avatar flex-shrink-0"><img class="img-fluid" src="img/avatar-3.jpg" alt="..."/></div><small>Grace Ng</small></a></li>
+                    <li class="list-inline-item small"><i class="far fa-clock"></i> 6 months ago</li>
+                    <li class="list-inline-item small"><i class="far fa-comment"></i> 12</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Pagination -->
+              <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item"><span class="page-link"><i class="fas fa-angle-left"></i></span></li>
+                  <li class="page-item active"><a class="page-link" href="!#">1</a></li>
+                  <li class="page-item"><span class="page-link"><i class="fas fa-angle-right"></i></span></li>
+                </ul>
+              </nav>
+            </div>
+          </main>
+          <!-- 4th category -->
+          <main class="col-lg-8 travel-content" id="4"> 
+            <div class="container">
+              <div class="row gy-4 mb-5">
+                <!-- post -->
+                <div class="col-xl-6"><a class="mb-3" href="post.html"><img class="img-fluid" src="img/blog-post-4-1.jpg" alt="..."/></a>
+                  <div class="d-flex align-items-center justify-content-between mb-2"><small class="text-gray-500">12 January | 2023</small><a class="small fw-bold text-uppercase text-dark small" href="!#">Culture</a></div>
+                  <h3 class="h4"><a class="text-black" href="post.html">Jeonju's Artistic Side: A Creative Haven in the Heart of Korea</a></h3>
+                  <p class="text-muted text-sm">Immerse yourself in the city's thriving art scene, from its galleries and museums to its vibrant street art and cultural festivals.</p>
+                  <ul class="list-inline list-separated text-gray-500 mb-0">
+                    <li class="list-inline-item"><a class="d-flex align-items-center flex-wrap text-reset" href="!#">
+                        <div class="avatar flex-shrink-0"><img class="img-fluid" src="img/avatar-3.jpg" alt="..."/></div><small>Grace Ng</small></a></li>
+                    <li class="list-inline-item small"><i class="far fa-clock"></i> 2 months ago</li>
+                    <li class="list-inline-item small"><i class="far fa-comment"></i> 12</li>
+                  </ul>
+                </div>
+                <!-- post             -->
+                <div class="col-xl-6"><a class="mb-3" href="post.html"><img class="img-fluid" src="img/blog-post-1-4.jpg" alt="..."/></a>
+                  <div class="d-flex align-items-center justify-content-between mb-2"><small class="text-gray-500">16 August | 2020</small><a class="small fw-bold text-uppercase text-dark small" href="!#">Tips</a></div>
+                  <h3 class="h4"><a class="text-black" href="post.html">Navigating Korea: Tips for Travelers Facing Language Barriers</a></h3>
+                  <p class="text-muted text-sm">Visiting Korea can be an unforgettable experience, but for those who don't speak Korean, navigating the city can be a challenge. Check out our top tips for making the most of your trip without getting lost in translation.</p>
+                  <ul class="list-inline list-separated text-gray-500 mb-0">
+                    <li class="list-inline-item"><a class="d-flex align-items-center flex-wrap text-reset" href="!#">
+                        <div class="avatar flex-shrink-0"><img class="img-fluid" src="img/avatar-3.jpg" alt="..."/></div><small>Grace Ng</small></a></li>
+                    <li class="list-inline-item small"><i class="far fa-clock"></i> 2 years ago</li>
+                    <li class="list-inline-item small"><i class="far fa-comment"></i> 12</li>
+                  </ul>
+                </div>
+                <!-- post             -->
+                <div class="col-xl-6"><a class="mb-3" href="post.html"><img class="img-fluid" src="img/blog-post-4-3.jpg" alt="..."/></a>
+                  <div class="d-flex align-items-center justify-content-between mb-2"><small class="text-gray-500">10 January | 2023</small><a class="small fw-bold text-uppercase text-dark small" href="!#">Culture</a></div>
+                  <h3 class="h4"><a class="text-black" href="post.html">Jeonju's Festivals and Celebrations: A Year-round Feast for the Senses</a></h3>
+                  <p class="text-muted text-sm">Experience the excitement of Jeonju's many festivals and celebrations, from the colorful Jeonju International Film Festival to the traditional Hanji Festival.</p>
+                  <ul class="list-inline list-separated text-gray-500 mb-0">
+                    <li class="list-inline-item"><a class="d-flex align-items-center flex-wrap text-reset" href="!#">
+                        <div class="avatar flex-shrink-0"><img class="img-fluid" src="img/avatar-3.jpg" alt="..."/></div><small>Grace Ng</small></a></li>
+                    <li class="list-inline-item small"><i class="far fa-clock"></i> 2 months ago</li>
+                    <li class="list-inline-item small"><i class="far fa-comment"></i> 12</li>
+                  </ul>
+                </div>
+                <!-- post -->
+                <div class="col-xl-6"><a class="mb-3" href="post.html"><img class="img-fluid" src="img/jeonju.jpg" alt="..."/></a>
+                  <div class="d-flex align-items-center justify-content-between mb-2"><small class="text-gray-500">8 July | 2021</small><a class="small fw-bold text-uppercase text-dark small" href="!#">Culture</a></div>
+                  <h3 class="h4"><a class="text-black" href="post.html"> Incredible destinations in Jeonju: A Cultural Adventure</a></h3>
+                  <p class="text-muted text-sm"> Omokdae and Imokdae Hill Forts, Jeonju Traditional Wine Museum, and Jeonju Makgeolli Alley. Discover the city's rich cultural heritage through its traditional crafts, including a visit to the Jeonju Hanji Museum and the Gyeonggijeon Shrine. Get off the beaten path and experience Jeonju like a local.</p>
+                  <ul class="list-inline list-separated text-gray-500 mb-0">
+                    <li class="list-inline-item"><a class="d-flex align-items-center flex-wrap text-reset" href="!#">
+                        <div class="avatar flex-shrink-0"><img class="img-fluid" src="img/avatar-3.jpg" alt="..."/></div><small>Grace Ng</small></a></li>
+                    <li class="list-inline-item small"><i class="far fa-clock"></i> 1 year ago</li>
+                    <li class="list-inline-item small"><i class="far fa-comment"></i> 12</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Pagination -->
+              <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item"><span class="page-link"><i class="fas fa-angle-left"></i></span></li>
+                  <li class="page-item active"><a class="page-link" href="!#">1</a></li>
+                  <li class="page-item"><span class="page-link"><i class="fas fa-angle-right"></i></span></li>
+                </ul>
+              </nav>
+            </div>
+          </main>
+          <!-- 5th category -->
+          <main class="col-lg-8 travel-content" id="5"> 
+            <div class="container">
+              <div class="row gy-4 mb-5">
+                <!-- post -->
+                <div class="col-xl-6"><a class="mb-3" href="post.html"><img class="img-fluid" src="img/jeolla1.jpg" alt="..."/></a>
+                  <div class="d-flex align-items-center justify-content-between mb-2"><small class="text-gray-500">22 March | 2023</small><a class="small fw-bold text-uppercase text-dark small" href="!#">Culture</a></div>
+                  <h3 class="h4"><a class="text-black" href="post.html">Jeolla-do: South Korea's Best-Kept Secret Destination for Foodies, Nature Lovers, and Culture Enthusiasts</a></h3>
+                  <p class="text-muted text-sm">Uncover the beauty and charm of Jeolla-do, South Korea's best-kept secret destination. From its stunning natural landscapes to its rich cultural heritage, Jeolla-do offers a unique and authentic travel experience that's off the beaten path.</p>
+                  <ul class="list-inline list-separated text-gray-500 mb-0">
+                    <li class="list-inline-item"><a class="d-flex align-items-center flex-wrap text-reset" href="!#">
+                        <div class="avatar flex-shrink-0"><img class="img-fluid" src="img/avatar-3.jpg" alt="..."/></div><small>Grace Ng</small></a></li>
+                    <li class="list-inline-item small"><i class="far fa-clock"></i> 2 days ago</li>
+                    <li class="list-inline-item small"><i class="far fa-comment"></i> 12</li>
+                  </ul>
+                </div>
+                <!-- post             -->
+                <div class="col-xl-6"><a class="mb-3" href="post.html"><img class="img-fluid" src="img/blog-post-5-2.jpg" alt="..."/></a>
+                  <div class="d-flex align-items-center justify-content-between mb-2"><small class="text-gray-500">1 January | 2023</small><a class="small fw-bold text-uppercase text-dark small" href="!#">Culture</a></div>
+                  <h3 class="h4"><a class="text-black" href="post.html">The Ultimate Guide to Jeolla-do: Where to Eat, Stay, and Play</a></h3>
+                  <p class="text-muted text-sm">Discover the region's unique blend of traditional and modern culture through immersive experiences, top-rated restaurants, and insider tips from locals.</p>
+                  <ul class="list-inline list-separated text-gray-500 mb-0">
+                    <li class="list-inline-item"><a class="d-flex align-items-center flex-wrap text-reset" href="!#">
+                        <div class="avatar flex-shrink-0"><img class="img-fluid" src="img/avatar-3.jpg" alt="..."/></div><small>Grace Ng</small></a></li>
+                    <li class="list-inline-item small"><i class="far fa-clock"></i> 2 months ago</li>
+                    <li class="list-inline-item small"><i class="far fa-comment"></i> 12</li>
+                  </ul>
+                </div>
+                <!-- post             -->
+                <div class="col-xl-6"><a class="mb-3" href="post.html"><img class="img-fluid" src="img/blog-post-1-4.jpg" alt="..."/></a>
+                  <div class="d-flex align-items-center justify-content-between mb-2"><small class="text-gray-500">16 August | 2020</small><a class="small fw-bold text-uppercase text-dark small" href="!#">Tips</a></div>
+                  <h3 class="h4"><a class="text-black" href="post.html">Navigating Korea: Tips for Travelers Facing Language Barriers</a></h3>
+                  <p class="text-muted text-sm">Visiting Korea can be an unforgettable experience, but for those who don't speak Korean, navigating the city can be a challenge. Check out our top tips for making the most of your trip without getting lost in translation.</p>
+                  <ul class="list-inline list-separated text-gray-500 mb-0">
+                    <li class="list-inline-item"><a class="d-flex align-items-center flex-wrap text-reset" href="!#">
+                        <div class="avatar flex-shrink-0"><img class="img-fluid" src="img/avatar-3.jpg" alt="..."/></div><small>Grace Ng</small></a></li>
+                    <li class="list-inline-item small"><i class="far fa-clock"></i> 2 years ago</li>
+                    <li class="list-inline-item small"><i class="far fa-comment"></i> 12</li>
+                  </ul>
+                </div>
+                <!-- post -->
+                <div class="col-xl-6"><a class="mb-3" href="post.html"><img class="img-fluid" src="img/blog-post-5-4.jpg" alt="..."/></a>
+                  <div class="d-flex align-items-center justify-content-between mb-2"><small class="text-gray-500">1 December | 2023</small><a class="small fw-bold text-uppercase text-dark small" href="!#">Itinerary</a></div>
+                  <h3 class="h4"><a class="text-black" href="post.html">Your Ultimate Damyang Itinerary: A Guide to the Best Activities and Attractions</a></h3>
+                  <p class="text-muted text-sm">From bamboo forests to historic temples, we've got you covered with the best activities and attractions that Damyang has to offer. With this guide, you'll be able to make the most of your time in Damyang and create memories that will last a lifetime. So grab your bags and get ready for an adventure of a lifetime!.</p>
+                  <ul class="list-inline list-separated text-gray-500 mb-0">
+                    <li class="list-inline-item"><a class="d-flex align-items-center flex-wrap text-reset" href="!#">
+                        <div class="avatar flex-shrink-0"><img class="img-fluid" src="img/avatar-3.jpg" alt="..."/></div><small>Grace Ng</small></a></li>
+                    <li class="list-inline-item small"><i class="far fa-clock"></i> 3 months ago</li>
+                    <li class="list-inline-item small"><i class="far fa-comment"></i> 12</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Pagination -->
+              <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item"><span class="page-link"><i class="fas fa-angle-left"></i></span></li>
+                  <li class="page-item active"><a class="page-link" href="!#">1</a></li>
+                  <li class="page-item"><span class="page-link"><i class="fas fa-angle-right"></i></span></li>
+                </ul>
+              </nav>
+            </div>
+          </main>
+          <aside class="col-lg-4">
+            <!-- Widget [Search Bar Widget]-->
+            <div class="card mb-5">
+              <div class="card-body">
+                <h3 class="h6">Search the blog</h3>
+                <form action="#">
+                  <div class="input-group border-bottom">
+                    <input class="form-control border-0 shadow-0 ps-0" type="search" placeholder="What are you looking for?">
+                    <button class="btn btn-link btn-sm shadow-0 px-0" type="submit"><i class="fas fa-search"></i></button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- Widget [Latest Posts Widget]        -->
+            <div class="card mb-5">
+              <div class="card-body">
+                <h3 class="h6 mb-3">Latest Posts</h3><a class="text-reset mb-3" href="!#">
+                  <div class="d-flex align-items-center"><img class="img-fluid flex-shrink-0" src="img/small-thumbnail-1.jpg" alt="..." width="55">
+                    <div class="ms-3">
+                      <p class="mb-2 fw-bold text-gray-700 lh-1">Jeolla-do: South Korea's Best-Kept Secret Destination for Foodies, Nature Lovers, and Culture Enthusiasts</p>
+                      <ul class="list-inline list-separated text-gray-500 d-flex align-items-center">
+                        <li class="list-inline-item small"><i class="far fa-eye"></i> 500</li>
+                        <li class="list-inline-item small"><i class="far fa-comment"></i> 12</li>
+                      </ul>
+                    </div>
+                  </div></a><a class="text-reset mb-3" href="!#">
+                  <div class="d-flex align-items-center"><img class="img-fluid flex-shrink-0" src="img/small-thumbnail-2.jpg" alt="..." width="55">
+                    <div class="ms-3">
+                      <p class="mb-2 fw-bold text-gray-700 lh-1">Rakkojae Seoul: A Hanok Stay at a 130-Year-Old Property at Bukchon Hanok Village</p>
+                      <ul class="list-inline list-separated text-gray-500 d-flex align-items-center">
+                        <li class="list-inline-item small"><i class="far fa-eye"></i> 500</li>
+                        <li class="list-inline-item small"><i class="far fa-comment"></i> 12</li>
+                      </ul>
+                    </div>
+                  </div></a><a class="text-reset" href="!#">
+                  <div class="d-flex align-items-center"><img class="img-fluid flex-shrink-0" src="img/small-thumbnail-3.jpg" alt="..." width="55">
+                    <div class="ms-3">
+                      <p class="mb-2 fw-bold text-gray-700 lh-1">The Best Markets in Busan: A Shopper's Paradise</p>
+                      <ul class="list-inline list-separated text-gray-500 d-flex align-items-center">
+                        <li class="list-inline-item small"><i class="far fa-eye"></i> 500</li>
+                        <li class="list-inline-item small"><i class="far fa-comment"></i> 12</li>
+                      </ul>
+                    </div>
+                  </div></a>
+              </div>
+            </div>
+            <!-- Widget [Tags Cloud Widget]-->
+            <div class="card">
+              <div class="card-body">     
+                <h3 class="h6 mb-3">Tags</h3>
+                <ul class="list-inline mb-0">
+                  <li class="list-inline-item"><a class="tag" href="!#">#Culture </a></li>
+                  <li class="list-inline-item"><a class="tag" href="!#">#Food </a></li>
+                  <li class="list-inline-item"><a class="tag" href="!#">#Itinerary </a></li>
+                  <li class="list-inline-item"><a class="tag" href="!#">#Accomodations </a></li>
+                  <li class="list-inline-item"><a class="tag" href="!#">#Tips </a></li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+    <!-- Page Footer-->
+    <footer class="footer text-white" style="background: #8C1F1F">
+      <div class="navbar-brand">
+        <img src="img\roaming pages-white.png" alt="Roaming Pages Logo">
+      </div>
+      <a class="text-reset fw-light" href="designthinking.html">Design Thinking</a>
+      <a class="text-reset fw-light" href="travels.html">Travels</a>
+      <a class="text-reset fw-light" href="contact.html">Contact</a>
+      <div style="text-align: right;">
+        
+        <ul class="list-unstyled">
+          <li class="list-inline-item"><a class="text-reset me-2" href="!#"><i class="fab fa-facebook-f"></i></a></li>
+          <li class="list-inline-item"><a class="text-reset me-2" href="!#"><i class="fab fa-twitter"></i></a></li>
+          <li class="list-inline-item"><a class="text-reset me-2" href="!#"><i class="fab fa-instagram"></i></a></li>
+          <li class="list-inline-item"><a class="text-reset me-2" href="!#"><i class="fab fa-behance"></i></a></li>
+          <li class="list-inline-item"><a class="text-reset me-2" href="!#"><i class="fab fa-pinterest"></i></a></li>
+          </ul>
+        <p class="mb-0 fw-light text-smt">&copy; 2023. All rights reserved.</p>
+        </p>
+      </div>
+    </footer>
+    <!-- JavaScript files-->
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/glightbox/glightbox.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/slideshow.js"></script>
+    <script src="js/categories.js"></script>
+    <script src="js/subscribe.js"></script>
+    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  </body>
+</html>
